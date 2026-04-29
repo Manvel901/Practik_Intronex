@@ -44,7 +44,7 @@ const css = {
   cursor: pointer;
   box-sizing: border-box;
   padding: 0 12px;
-  background-color: ${props=> props.backgroundColor};
+  background-color: green;
   color: #000;
   user-select: none;`
 

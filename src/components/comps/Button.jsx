@@ -7,7 +7,7 @@ const ButtonComponent =()=>{
    
     return(
         <React.Fragment>
-            <Button backgroundColor ={"red"} >
+            <Button >
                 Сохранить транзакцию
             </Button>
 
