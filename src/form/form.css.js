@@ -33,21 +33,24 @@ const css = {
    margin-bottum: 0px;
   }
   `,
-  Button:styled.span`
+  
+  StyledButton : styled.span`
   display: block;
   position: relative;
   width: 220px;
   height: 44px;
-  line-height: 42px; 
+  line-height: 44px; 
   border-radius: 4px; 
   text-align: center;
   cursor: pointer;
   box-sizing: border-box;
   padding: 0 12px;
-  background-color: green;
+  user-select: none;
+  
+  /* 2️⃣ Читаем проп $bgColor. Если его нет → серый по умолчанию */
+  background-color: ${props => props.$bgColor || '#808080'};
   color: #000;
-  user-select: none;`
-
+ `
 }
 
 export default css;

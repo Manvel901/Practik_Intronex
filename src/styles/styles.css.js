@@ -34,7 +34,7 @@ const css = {
      position: relative;`,
      HaederButton:styled.div`
      font-size: 40px;
-     color: #d4ff00;`
+     color: #ea0000;`
   }
 
 

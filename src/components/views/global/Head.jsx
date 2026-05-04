@@ -11,9 +11,18 @@ const buttonCSS = {
      display: 'block',
      padding: '10px 14px 12px',
      borderRadius: '6px',
-     backgroundColor: '#B0F347',
+     backgroundColor: '#b1f347',
      cursor: 'pointer',
      marginLeft: '15px'
+};
+
+const buttonCSSRight = {
+     display: 'block',
+     padding: '10px 14px 12px',
+     borderRadius: '6px',
+     backgroundColor: '#f38047',
+     cursor: 'pointer',
+     marginRight: '50px'
 };
 
 
@@ -28,7 +37,7 @@ const Head =()=>{
                     <button style={buttonCSS}>{topMenu.three}</button>
                 </HeaderCSS.HeaderMenu>
                 <HeaderCSS.HaederButton>
-                    <button style={buttonCSS}>Регистрация</button>
+                    <button style={buttonCSSRight}>Регистрация</button>
                 </HeaderCSS.HaederButton>
             </HeadContainer>
 

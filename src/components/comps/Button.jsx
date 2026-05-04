@@ -1,18 +1,17 @@
 import React from "react";
 import css from "../../form/form.css";
 
-const {Button} = css;
+const {StyledButton} = css;
 
-const ButtonComponent =()=>{
-   
-    return(
-        <React.Fragment>
-            <Button >
-                Сохранить транзакцию
-            </Button>
-
-        </React.Fragment>
-    );
-}
+const ButtonComponent = ({ children, onClick, $bgColor }) => {
+  return (
+    <StyledButton 
+      onClick={onClick} 
+      $bgColor={$bgColor} // ⚡ Обязательно передаём проп дальше в styled-компонент
+    >
+      {children}
+    </StyledButton>
+  );
+};
 
 export default ButtonComponent;
