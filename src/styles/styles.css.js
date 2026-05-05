@@ -20,7 +20,7 @@ const css = {
   position: relative;
   width: 100%;
   height: 80px;
-  background-color: #8c8c90;
+  background-color: #bbbbc0;
     `, 
   HeaderCSS: {
     Logo:styled.div`

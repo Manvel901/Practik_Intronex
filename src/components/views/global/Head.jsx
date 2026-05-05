@@ -3,9 +3,9 @@ import css from '../../../styles/styles.css'
 
 const {HeadContainer, HeaderCSS} = css;
 const topMenu ={
-    one:'О Компании',
+    one:'Главная',
     two:'Контакты',
-    three:'Поддержка'
+    three:'Стастика'
 };
 const buttonCSS = {
      display: 'block',
@@ -26,15 +26,16 @@ const buttonCSSRight = {
 };
 
 
-const Head =()=>{
+const Head =(props)=>{
+    const {action} = props;
     return(
         <React.Fragment>
             <HeadContainer>
                 <HeaderCSS.Logo>MiyaGI&AndyPanda</HeaderCSS.Logo>
                 <HeaderCSS.HeaderMenu>
-                    <button style={buttonCSS}>{topMenu.one}</button>
+                    <button onClick={()=> action("main")} style={buttonCSS}>{topMenu.one}</button>
                     <button style={buttonCSS}>{topMenu.two}</button>
-                    <button style={buttonCSS}>{topMenu.three}</button>
+                    <button onClick={()=> action("static")} style={buttonCSS}>{topMenu.three}</button>
                 </HeaderCSS.HeaderMenu>
                 <HeaderCSS.HaederButton>
                     <button style={buttonCSSRight}>Регистрация</button>
