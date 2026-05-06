@@ -59,31 +59,31 @@ const Main = (props) => {
         <React.Fragment>
 
 
-            <FornatContainer>
+            <FornatContainer style={{alignItems: "flex-start"}}>
                 <InputComponent inputValue={value} action={setValue} placeholder="Введите сумму транзакции" />
-                <FormControl>
+                <FormControl style={{marginTop: "9px", marginButton:"14px"}}>
                     <FormLabel id="demo-controlled-radio-buttons-group">Выберите тип транзакции</FormLabel>
                     <RadioGroup
                         aria-labelledby="demo-controlled-radio-buttons-group"
                         name="controlled-radio-buttons-group"
                         value={type}
                         onChange={handleChange}
+                        style={{marginTop:"5px", marginLeft:"7px"}}
                     >
                         <FormControlLabel value="расходы" control={<Radio />} label="Расходы" />
                         <FormControlLabel value="доходы" control={<Radio />} label="Доходы" />
                     </RadioGroup>
                 </FormControl>
-                
-
-                
+                   
                 {type ==="доходы" && <InputComponent inputValue={comment} action={setComment} placeholder="Введите комментарий" />}
-                {type === "расходы" && <FormControl>
-                    <FormLabel id="demo-controlled-radio-buttons-group">Выберите тип расходов</FormLabel>
+                {type === "расходы" && <FormControl style={{marginTop: "0px", marginButton:"14px"}}>
+                    <FormLabel id="demo-controlled-radio-buttons-group" style={{ color:"red"}}>Выберите тип расходов</FormLabel>
                     <RadioGroup
                         aria-labelledby="demo-controlled-radio-buttons-group"
                         name="controlled-radio-buttons-group"
-                        value={comment}
+                        value={comment} 
                         onChange={handleChangeCom}
+                        style={{marginTop:"5px", marginLeft:"7px"}}
                     >
                         <FormControlLabel value="оплата Интернета" control={<Radio />} label="оплата Интернета" />
                         <FormControlLabel value="оплата ЖКХ" control={<Radio />} label="оплата ЖКХ" />
