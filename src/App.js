@@ -27,7 +27,7 @@ function App() {
       </Route>
 
       <Route
-      path="/plan"
+      path="/plan/:demoParam"
       element={<Plan/>}>
       </Route>
     </Routes>

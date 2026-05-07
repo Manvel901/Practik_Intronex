@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import css from '../../../styles/styles.css'
 
 const {HeadContainer, HeaderCSS} = css;
@@ -28,15 +28,17 @@ const buttonCSSRight = {
 
 
 const Head =()=>{
+
+    const navigate = useNavigate()
     
     return(
         <React.Fragment>
             <HeadContainer>
-                <HeaderCSS.Logo>BUHCalculate</HeaderCSS.Logo>
+                <HeaderCSS.Logo>BUHCalculater</HeaderCSS.Logo>
                 <HeaderCSS.HeaderMenu>
-                    <button style={buttonCSS}><Link to={"/main"} style={{color:"inherit", textDecoration:"none"}}>{topMenu.one}</Link></button>
-                    <button style={buttonCSS}><Link to={"/plan"} style={{color:"inherit" , textDecoration:"none"}}>{topMenu.two}</Link></button>
-                    <button style={buttonCSS}><Link to={"/stat"} style={{color:"inherit" , textDecoration:"none"}}>{topMenu.three}</Link></button>
+                    <button onClick={()=> {navigate("/main")}} style={buttonCSS}>{topMenu.one}</button>
+                    <button onClick={()=> {navigate("/plan/demoParam")}} style={buttonCSS}>{topMenu.two}</button>
+                    <button onClick={()=> {navigate("/stat")}} style={buttonCSS}>{topMenu.three}</button>
                 </HeaderCSS.HeaderMenu>
                 <HeaderCSS.HaederButton>
                     <button style={buttonCSSRight}>Регистрация</button>
