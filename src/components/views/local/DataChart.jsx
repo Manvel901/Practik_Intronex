@@ -181,13 +181,14 @@ const DataChart = (props) => {
         <React.Fragment>
 
         { show === true && <DataListContainer style={{ minHeight: "500px", alignItems: "stretch" }}>
+            <span style={{ textAlign:"center", color: "red", fontSize:"20px", textDecoration:"underline" }}>{"Круговая диаграмма расходов"}</span>
             <MyResponsivePie
                 data={[
                     { id: "оплата Интернета", label: "оплата Интернета", value: r01, color: "hsl(302, 100%, 62%)" },
                     { id: "оплата ЖКХ", label: "оплата ЖКХ", value: r02, color: "hsl(217, 100%, 50%)" },
                     { id: "путешествия", label: "путешествия", value: r03, color: "hsl(171, 100%, 50%)" },
                     { id: "образование", label: "образование", value: r04, color: "hsl(182, 100%, 50%)" }
-                ]}
+                ].filter(item=> item.value>0)}
                 margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
                 innerRadius={0.5}
                 padAngle={0.7}

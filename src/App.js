@@ -1,19 +1,37 @@
 
 import React, {useState} from "react";
-import Head from "../src/components/views/global/Head"
+import {Routes, Route} from "react-router-dom";
+import Head from "../src/components/views/global/Head";
 import Main from "./components/pages/Main";
 import Static from "./components/pages/Static";
+import Plan from "./components/pages/Plan";
 
 function App() {
-  const [showPage, setShowPage] = useState("main");
+ 
   const [data, setData] = useState([]);
 
   return (
    <React.Fragment>
-    <Head action ={setShowPage}></Head>
-    {showPage === "main" ?
-     <Main action = {setData}></Main> :
-     <Static statDate= {data} ></Static> }
+      <Head></Head>
+
+    <Routes>
+      <Route
+      path="/main"
+      element= {<Main action = {setData}/>}>
+      </Route>
+
+      <Route 
+      path="/stat"
+      element = {<Static statDate= {data}/>}
+      >
+      </Route>
+
+      <Route
+      path="/plan"
+      element={<Plan/>}>
+      </Route>
+    </Routes>
+
    </React.Fragment>
   );
 }
