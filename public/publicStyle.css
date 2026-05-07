@@ -1,0 +1,87 @@
+ :root {
+      --primary: #8936FF;
+      --secondary: #2EC6FE;
+      --primary-dark: #6d28cc;
+      --secondary-dark: #25a3d0;
+      --bg-light: #f8f9ff;
+      --text-dark: #1a1a2e;
+      --text-light: #ffffff;
+      --shadow: 0 4px 20px rgba(137, 54, 255, 0.25);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      /* убирает синий квадрат при тапе на мобильных */
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--text-dark);
+      min-height: 100vh;
+      min-height: 100dvh;
+      /* для мобильных браузеров с плавающей адресной строкой */
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Убирает стандартные отступы и скролл-бары для "нативного" вида */
+    #root {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Скролл-бар в стиле приложения */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(var(--primary), var(--secondary));
+      border-radius: 3px;
+    }
+
+/* Анимация появления контента */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.app-container {
+  animation: fadeIn 0.3s ease-out forwards;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) 
+           env(safe-area-inset-bottom) env(safe-area-inset-left); /* для iPhone с челкой */
+}
+
+/* Если нужен кастомный лоадер */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.loader::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(137, 54, 255, 0.2);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

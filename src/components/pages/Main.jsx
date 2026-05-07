@@ -96,6 +96,7 @@ const Main = (props) => {
                 <ButtonComponent
                     $bgColor={buttonColor}  // 📦 Передаём вычисленный цвет
                     onClick={validation}
+                
                 >
                     Сохранить транзакцию
                 </ButtonComponent>

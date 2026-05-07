@@ -58,13 +58,33 @@ ContentCell: styled.span`
 `,
 
 ButtonItem: styled.span`
-  display: block;
-  position: relative;
-  font-size: 15px;
-  color: #ff0000 ;
-  margin-right: 40px;
+display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  margin: 4px 8px 4px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: ${props => props.$active ? '#fff' : '#555'};
+  background: ${props => props.$active 
+    ? 'linear-gradient(135deg, var(--primary), var(--secondary))' 
+    : 'rgba(137, 54, 255, 0.1)'};
+  border: 2px solid ${props => props.$active ? 'transparent' : 'var(--primary)'};
+  border-radius: 50px;
   cursor: pointer;
-`
+  transition: all 0.2s ease;
+  
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 10px 18px;
+    font-size: 14px;
+    margin: 4px 4px 4px 0;
+  }
+`,
 };
 
 
