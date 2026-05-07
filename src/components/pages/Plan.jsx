@@ -29,7 +29,7 @@ const Plan =()=>{
     return(
         <React.Fragment>
             
-            <span>СТРАНИЦА НЕДОСТУПНА</span>
+            
 
              <span style={{display: "block", marginTop: "100px", marginLeft: "100px"}}> {"имя пользователя = "} {params.get("userName")}</span> 
 
