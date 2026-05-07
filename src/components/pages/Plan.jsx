@@ -13,7 +13,7 @@ const Plan =()=>{
         console.log(demoParam)
         setParams({userName:"Markinio", userAge:"21"})
 
-    },[demoParam]
+    },[demoParam, setParams]
     )
 // const [count, setCount]= useState(0);
 // const [data, setData]= useState({name:'nik', age:'22'});

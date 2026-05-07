@@ -30,6 +30,12 @@ function App() {
       path="/plan/:demoParam"
       element={<Plan/>}>
       </Route>
+
+      <Route
+      path={'*'}
+      element={<Main action = {setData}/>}>
+      </Route>
+      
     </Routes>
 
    </React.Fragment>
