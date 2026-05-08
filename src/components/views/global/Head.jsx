@@ -37,8 +37,8 @@ const Head =()=>{
                 <HeaderCSS.Logo>BUHCalculater</HeaderCSS.Logo>
                 <HeaderCSS.HeaderMenu>
                     <button onClick={()=> {navigate("/main")}} style={buttonCSS}>{topMenu.one}</button>
-                    <button onClick={()=> {navigate("/plan/demoParam")}} style={buttonCSS}>{topMenu.two}</button>
-                    <button onClick={()=> {navigate("/stat")}} style={buttonCSS}>{topMenu.three}</button>
+                    <button onClick={()=> {navigate("/plan")}} style={buttonCSS}>{topMenu.two}</button>
+                    <button onClick={()=> {navigate("/stat/расходы")}} style={buttonCSS}>{topMenu.three}</button>
                 </HeaderCSS.HeaderMenu>
                 <HeaderCSS.HaederButton>
                     <button style={buttonCSSRight}>Регистрация</button>

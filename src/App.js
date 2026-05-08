@@ -21,13 +21,13 @@ function App() {
       </Route>
 
       <Route 
-      path="/stat"
+      path="/stat/:viewType"
       element = {<Static statDate= {data}/>}
       >
       </Route>
 
       <Route
-      path="/plan/:demoParam"
+      path="/plan"
       element={<Plan/>}>
       </Route>
 
